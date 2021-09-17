@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Do something with argparse.
+"""Command line args with argparse.
 
 See:
 - https://realpython.com/command-line-interfaces-python-argparse/
 - https://docs.python.org/3/library/argparse.html
+
+Usage:
+    python3 try-argparse.py
 """
 
-from os import environ
-import sys
 import argparse
 
 def init_argparse() -> argparse.ArgumentParser:

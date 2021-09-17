@@ -1,6 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """helloworld level snippets."""
+
 import requests
 
 def main():
@@ -8,13 +9,12 @@ def main():
     print(msg)
     msg = msg.capitalize()
 
+    # HTTP GET
     print(requests.__version__)
-
     resp = requests.get("https://sixty-north.com/c/t.txt")
-
     print(resp.text)
 
-    print("done")
+    print("Done.")
 
 
 if __name__ == "__main__":
