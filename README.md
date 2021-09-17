@@ -23,6 +23,8 @@ python3 -m mypackage # or ./run-mypackage.sh
 
 ## Resources
 
+- [Real Python](https://realpython.com/)
+- [Beginner's Python Cheat Sheets](https://leanpub.com/beginners-python-cheat-sheets/) by [Eric Matthes](https://github.com/ehmatthes) (from [Python Crash Course](https://ehmatthes.github.io/pcc/cheatsheets/README.html))
 - [Awesome Python](https://github.com/vinta/awesome-python)
 - [Click](https://click.palletsprojects.com/)
 
