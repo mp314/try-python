@@ -11,14 +11,24 @@
 ### Running
 
 ```shell
-# start virtual enviroment and install requirements
+# start virtual enviroment and activate it
+# macOS/Linux
 python3 -m venv .venv
 . .venv/bin/activate
-pip3 install <any requirements>
+# Windows
+python -m venv .venv 
+# or py -3 -m venv .venv
+.venv\Scripts\activate
+
+# Install requirements
+pip install <any requirements> 
+# or pip install -r requirements.txt
+# pip3 on macOS/Linux
 
 # mypackage
 cd try-package
-python3 -m mypackage # or ./run-mypackage.sh
+python -m mypackage
+# python3 on macOS/Linux or ./run-mypackage.sh
 ```
 
 ## Resources
@@ -39,5 +49,5 @@ Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. S
 
 ## Contact
 
-- GitHub repository: [apa64/try-python](https://github.com/apa64/try-python)
-- Twitter [@apa64](https://twitter.com/apa64)
+- GitHub repository: [mp314/try-python](https://github.com/mp314/try-python)
+
