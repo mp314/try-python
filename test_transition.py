@@ -1,3 +1,4 @@
+import pytest
 import try_transition
 
 def test_transition_create():
@@ -14,3 +15,9 @@ def test_transition_distress_call():
     batman.distress_call()
     batman.complete_mission()
     assert batman.kittens_rescued == 1
+
+def test_transition_clean_up():
+    batman = try_transition.NarcolepticSuperhero("Batman")
+    with pytest.raises(Exception) as e_info:
+       batman.clean_up() 
+   
