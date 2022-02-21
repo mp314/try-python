@@ -1,6 +1,10 @@
 import numpy as np
 import skfuzzy.control as ctrl
 
+# Plot the result in pretty 3D with alpha blending
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # Required for 3D plotting
+
 # Sparse universe makes calculations faster, without sacrifice accuracy.
 # Only the critical points are included here; making it higher resolution is
 # unnecessary.
@@ -73,21 +77,28 @@ for i in range(21):
         sim.compute()
         z[i, j] = sim.output['output']
 
-# Plot the result in pretty 3D with alpha blending
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D  # Required for 3D plotting
 
-fig = plt.figure(figsize=(8, 8))
-ax = fig.add_subplot(111, projection='3d')
 
-surf = ax.plot_surface(x, y, z, rstride=1, cstride=1, cmap='viridis',
-                       linewidth=0.4, antialiased=True)
 
-cset = ax.contourf(x, y, z, zdir='z', offset=-2.5, cmap='viridis', alpha=0.5)
-cset = ax.contourf(x, y, z, zdir='x', offset=3, cmap='viridis', alpha=0.5)
-cset = ax.contourf(x, y, z, zdir='y', offset=3, cmap='viridis', alpha=0.5)
 
-ax.view_init(30, 200)
 
-fig.show()
-print(ax)
+def main():
+    fig = plt.figure(figsize=(8, 8))
+    ax = fig.add_subplot(111, projection='3d')
+
+    surf = ax.plot_surface(x, y, z, rstride=1, cstride=1, cmap='viridis',
+                        linewidth=0.4, antialiased=True)
+
+    cset = ax.contourf(x, y, z, zdir='z', offset=-2.5, cmap='viridis', alpha=0.5)
+    cset = ax.contourf(x, y, z, zdir='x', offset=3, cmap='viridis', alpha=0.5)
+    cset = ax.contourf(x, y, z, zdir='y', offset=3, cmap='viridis', alpha=0.5)
+
+    ax.view_init(30, 200)
+
+    #fig.show()
+    plt.show()
+    print(ax)
+
+
+if __name__ == "__main__":
+    main()
