@@ -27,9 +27,10 @@ def gen_test_data(data, debug=False):
     return test_data
 
 # Plot scatter
-def plot_scatter(data, debug=False):
+def plot_scatter(data, title=None, debug=False):
     # ENGINESIZE vs CO2EMISSIONS:
     plt.scatter(data["ENGINESIZE"] , data["CO2EMISSIONS"] , color="blue")
+    plt.title(title)
     plt.xlabel("ENGINESIZE")
     plt.ylabel("CO2EMISSIONS")
     plt.show()
@@ -78,13 +79,13 @@ def main():
     data = read_data("https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/FuelConsumptionCo2.csv", debug)
 
     t = gen_test_data(data)
-    plot_scatter(t)
+    plot_scatter(t, title="Test data")
 
     
     # Predicting emission for future car:
     my_engine_size = 3.5
     regr = model(data, debug)
-    plot_scatter(data)
+    plot_scatter(data, title="Data")
     plot_regression_line(data, regr)
     estimatd_emission = get_regression_predictions(my_engine_size,regr.intercept_[0],regr.coef_[0][0])
     print ("Estimated Emission :",estimatd_emission)
