@@ -1,10 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Numpy"""
+
 import numpy as np
 from numpy.random import default_rng
 
 
 
-def transpose(d):
-  return d.T
+def transpose(arr):
+    '''Transpose array'''
+    return arr.T
 
 rng = default_rng()
 vals = rng.standard_normal(10)

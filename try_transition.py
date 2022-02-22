@@ -1,7 +1,13 @@
-from transitions import Machine
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Transitions"""
+
 import random
+from transitions import Machine
+
 
 class NarcolepticSuperhero(object):
+    '''Transitionclass'''
 
     # Define some states. Most of the time, narcoleptic superheroes are just like
     # everyone else. Except for...
@@ -61,45 +67,47 @@ class NarcolepticSuperhero(object):
         return random.random() < 0.5
 
     def change_into_super_secret_costume(self):
+        '''Testing things'''
         print("Beauty, eh?")
 
 
 
 def main():
+    '''Batman doing stuff'''
     batman = NarcolepticSuperhero("Batman")
-    batman.state
+    print(batman.state) # pylint: disable=no-member
 
-    batman.wake_up()
-    print(batman.state)
+    batman.wake_up() # pylint: disable=no-member
+    print(batman.state) # pylint: disable=no-member
 
-    batman.nap()
-    print(batman.state)
+    batman.nap() # pylint: disable=no-member
+    print(batman.state) # pylint: disable=no-member
 
     #batman.clean_up()
     #MachineError: "Can't trigger event clean_up from state asleep!"
-    
-    batman.wake_up()
-    batman.work_out()
-    print(batman.state)
+
+    batman.wake_up() # pylint: disable=no-member
+    batman.work_out() # pylint: disable=no-member
+    print(batman.state) # pylint: disable=no-member
 
     # Batman still hasn't done anything useful...
-    batman.kittens_rescued
+    print(batman.kittens_rescued)
 
 
     # We now take you live to the scene of a horrific kitten entreement...
-    batman.distress_call()
-    print(batman.state)
+    batman.distress_call() # pylint: disable=no-member
+    print(batman.state) # pylint: disable=no-member
 
     # Back to the crib.
-    batman.complete_mission()
-    print(batman.state)
+    batman.complete_mission() # pylint: disable=no-member
+    print(batman.state) # pylint: disable=no-member
 
-    batman.clean_up()
-    print(batman.state)
+    batman.clean_up() # pylint: disable=no-member
+    print(batman.state) # pylint: disable=no-member
 
 
     # Another productive day, Alfred.
-    batman.kittens_rescued
+    print(batman.kittens_rescued)
 
 
 if __name__ == "__main__":

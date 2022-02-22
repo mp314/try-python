@@ -3,10 +3,11 @@
 """Minimal python script
 
 Usage:
-    python3 boilerplate-minimal.py
+    python3 boilerplate_minimal.py
 """
 
 def main():
+    ''' Print Hello World '''
     print("Hello world.")
     return
 

@@ -1,5 +1,11 @@
-def increment(x):
-    return x + 1
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Pytest"""
 
-def decrement(x):
-    return x - 1
+def increment(val):
+    '''Increase by 1'''
+    return val + 1
+
+def decrement(val):
+    '''Decrease by 1'''
+    return val - 1

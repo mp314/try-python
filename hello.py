@@ -5,6 +5,7 @@
 import requests
 
 def main():
+    ''' Print HELLO WORLD and other stuff '''
     msg = "Hello World"
     print(msg)
     msg = msg.capitalize()
@@ -20,3 +21,4 @@ def main():
 if __name__ == "__main__":
     # running as script, this is the main() for this package
     main()
+    

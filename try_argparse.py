@@ -35,13 +35,14 @@ def init_argparse() -> argparse.ArgumentParser:
     return _parser
 
 def main():
+    '''Print commandline arguments'''
     # parse command line
     parser = init_argparse()
     args = parser.parse_args()
     print(f"POSITIONAL_ARG_1 = '{args.Positional_arg_1}'")
     print(f"OPTIONAL_ARG_O = '{args.option}'")
     print(f"modifier = '{args.modifier}'")
-    print(f"Done.")
+    print("Done.")
 
 if __name__ == '__main__':
     # execute only if run as a script

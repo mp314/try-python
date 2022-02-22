@@ -9,9 +9,10 @@ Usage:
 import sys
 
 def main():
+    '''Print number of command line arguments + list arguments'''
     print ('Number of arguments:', len(sys.argv), 'arguments.')
     print ('Argument List:', str(sys.argv))
-    print(f"Done.")
+    print("Done.")
 
 if __name__ == "__main__":
     main()

@@ -1,9 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Fuzzylogic"""
+
 import numpy as np
 import skfuzzy.control as ctrl
 
 # Plot the result in pretty 3D with alpha blending
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D  # Required for 3D plotting
+#from mpl_toolkits.mplot3d import Axes3D  # Required for 3D plotting
 
 # Sparse universe makes calculations faster, without sacrifice accuracy.
 # Only the critical points are included here; making it higher resolution is
@@ -83,21 +87,24 @@ for i in range(21):
 
 
 def main():
+    '''Plot stuff'''
     fig = plt.figure(figsize=(8, 8))
-    ax = fig.add_subplot(111, projection='3d')
+    ax1 = fig.add_subplot(111, projection='3d')
 
-    surf = ax.plot_surface(x, y, z, rstride=1, cstride=1, cmap='viridis',
+    # surf =
+    ax1.plot_surface(x, y, z, rstride=1, cstride=1, cmap='viridis',
                         linewidth=0.4, antialiased=True)
 
-    cset = ax.contourf(x, y, z, zdir='z', offset=-2.5, cmap='viridis', alpha=0.5)
-    cset = ax.contourf(x, y, z, zdir='x', offset=3, cmap='viridis', alpha=0.5)
-    cset = ax.contourf(x, y, z, zdir='y', offset=3, cmap='viridis', alpha=0.5)
+    # cset = x3
+    ax1.contourf(x, y, z, zdir='z', offset=-2.5, cmap='viridis', alpha=0.5)
+    ax1.contourf(x, y, z, zdir='x', offset=3, cmap='viridis', alpha=0.5)
+    ax1.contourf(x, y, z, zdir='y', offset=3, cmap='viridis', alpha=0.5)
 
-    ax.view_init(30, 200)
+    ax1.view_init(30, 200)
 
     #fig.show()
     plt.show()
-    print(ax)
+    print(ax1)
 
 
 if __name__ == "__main__":

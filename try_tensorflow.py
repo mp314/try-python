@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Tensorflow"""
+
 import tensorflow as tf
 mnist = tf.keras.datasets.mnist
 
