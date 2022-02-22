@@ -14,7 +14,7 @@ def get_name() -> str:
 
 def print_helloworld(name: str):
     """Print a message for someone.
-    
+
     :param name: who to hello.
     """
     print("hello", name)
