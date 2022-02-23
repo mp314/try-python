@@ -1,4 +1,4 @@
-# try-python
+# try_python
 
 > My Python snippets and boilerplates.
 
