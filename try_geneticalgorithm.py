@@ -87,7 +87,7 @@ def genetic_algorithm(objective, bounds, n_bits, n_iter, n_pop, r_cross, r_mut):
         for i in range(n_pop):
             if scores[i] < best_eval:
                 best, best_eval = pop[i], scores[i]
-                print(f">{gen}, new best f({decoded[i]}) = {scores[i]}")
+                print(f">{gen}, new best f({decoded[i]}) = {scores[i]:.8f}")
         # select parents
         selected = [selection(pop, scores) for _ in range(n_pop)]
         # create the next generation
@@ -124,7 +124,7 @@ def main():
         bounds, n_bits, n_iter, n_pop, r_cross, r_mut)
     print('Done!')
     decoded = decode(bounds, n_bits, best)
-    print(f"f({decoded}) = {score}")
+    print(f"f({decoded}) = {score:.8f}")
 
 
 if __name__ == "__main__":
