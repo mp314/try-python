@@ -28,3 +28,7 @@ print("b ",b.shape)
 c = b.view()
 
 print("c ",c)
+
+print(f'Min: {c[np.unravel_index(np.argmin(c, axis=None), c.shape)]} @ {np.unravel_index(np.argmin(c, axis=None), c.shape)} ({np.argmin(c, axis=None)})')
+
+print(np.arange(24).reshape((2, 3, 4)))
